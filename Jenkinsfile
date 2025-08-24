@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                script {
                 echo 'Building...'
                 def config = [
                     url: 'https://github.com/khyati-source/maven_calculator_app-main.git',
@@ -18,6 +19,7 @@ pipeline {
              ls -lrt
              '''
         
+            }
             }
         }
     }
